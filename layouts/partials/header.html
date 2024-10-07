@@ -27,6 +27,11 @@
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
     {{ partial "hooks/head-end.html" . }}
+
+	{{ if .Site.Params.favicon }}
+	<link rel="shortcut icon" href="{{ relURL ($.Site.Params.favicon) }}" type="image/x-icon" />
+	{{ end }}
+
 	</head>
 	<body class="landing is-preload">
 
